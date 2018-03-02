@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'users',
     'thoughts',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -120,3 +121,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'assets'), ]
+
+#Authentication
+LOGIN_URL = 'users:login'

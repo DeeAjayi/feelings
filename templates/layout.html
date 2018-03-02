@@ -1,3 +1,4 @@
+{% load static from staticfiles %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,11 +8,12 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel = "stylesheet" href="{% static 'css/feelings.css' %}">
     <title>{% block title%} Feelings {% endblock %}</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="{% url 'home' %}">Feelings</a>
+      <a class="navbar-brand" href="#">Feelings</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -43,14 +45,18 @@
       </div>
     </nav>
 
-
-    {% block content %}{% endblock %}
-
-    <div class="container">
+    <div id="content">
+        {% block content %}{% endblock %}
         <footer class="container">
-        <p>&copy; Company 2017-2018</p>
+            <p>&copy; Company 2017-2018</p>
         </footer>
     </div>
+
+
+    <div class="container">
+
+    </div>
+
 
 
     <!-- Optional JavaScript -->
